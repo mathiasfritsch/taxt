@@ -16,7 +16,6 @@ frontend/.playwright/
 .vscode/
 .idea/
 *.suo
-*.user
 *.userosscache
 *.sln.docstates
 

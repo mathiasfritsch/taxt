@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
     <PropertyGroup>
-        <TargetFramework>net10.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
+      <UserSecretsId>8790e81b-a5cd-4091-a344-4502a1399236</UserSecretsId>
     </PropertyGroup>
-
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\TaxtDB\TaxtDB.csproj" />
+      <ProjectReference Include="..\TaxtModel\TaxtModel.csproj" />
+      <ProjectReference Include="..\TaxtService\TaxtService.csproj" />
     </ItemGroup>
 
 </Project>

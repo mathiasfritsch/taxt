@@ -1,3 +1,7 @@
 <Solution>
+  <Project Path="Taxt.Tests/Taxt.Tests.csproj" />
   <Project Path="Taxt/Taxt.csproj" />
+  <Project Path="TaxtDB/TaxtDB.csproj" />
+  <Project Path="TaxtModel/TaxtModel.csproj" />
+  <Project Path="TaxtService/TaxtService.csproj" />
 </Solution>

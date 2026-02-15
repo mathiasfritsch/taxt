@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Taxt.Dto;
+using TaxtModel.Dto;
+using TaxtService.Services;
 
 namespace Taxt.Controllers;
 
@@ -7,18 +8,18 @@ namespace Taxt.Controllers;
 [Route("api/[controller]")]
 public class DocumentsController : ControllerBase
 {
-    // GET: api/transactions
-    [HttpGet]
-    public IActionResult Get()
+    private readonly IDocumentsService _documentsService;
+
+    public DocumentsController(IDocumentsService documentsService)
     {
-        
-        var documents = new List<Document>()
-        {
-            new Document { Id = 1, Name = "Document 1" },
-            new Document { Id = 2, Name = "Document 2" },
-            new Document { Id = 3, Name = "Document 3" }
-        };
-        
+        _documentsService = documentsService;
+    }
+
+    // GET: api/documents
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<DocumentDto>>> Get(CancellationToken cancellationToken)
+    {
+        var documents = await _documentsService.GetDocumentsAsync(cancellationToken);
         return Ok(documents);
     }
 }

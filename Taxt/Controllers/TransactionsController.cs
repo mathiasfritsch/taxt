@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Taxt.Dto;
-
 namespace Taxt.Controllers;
 
 [ApiController]
