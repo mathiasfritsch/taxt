@@ -1,0 +1,24 @@
+<div class="documents-container" data-id="documents-container">
+  <h2 data-id="documents-heading">Documents</h2>
+  
+  @if (loading()) {
+    <p data-id="loading-message">Loading documents...</p>
+  }
+  
+  @if (error()) {
+    <p class="error" data-id="error-message">{{ error() }}</p>
+    <button (click)="loadDocuments()" data-id="retry-button">Retry</button>
+  }
+  
+  @if (!loading() && !error() && documents().length > 0) {
+    <ul data-id="documents-list">
+      @for (doc of documents(); track doc.id) {
+        <li [attr.data-id]="'document-' + doc.id">{{ doc.name }} (ID: {{ doc.id }})</li>
+      }
+    </ul>
+  }
+  
+  @if (!loading() && !error() && documents().length === 0) {
+    <p data-id="empty-message">No documents found.</p>
+  }
+</div>

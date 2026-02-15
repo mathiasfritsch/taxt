@@ -1,0 +1,8 @@
+@Taxt_HostAddress = http://localhost:5062
+
+GET {{Taxt_HostAddress}}/api/transactions/
+Accept: application/json
+
+###
+GET {{Taxt_HostAddress}}/api/Documents/
+Accept: application/json

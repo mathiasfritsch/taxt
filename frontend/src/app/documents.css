@@ -1,0 +1,40 @@
+.documents-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.documents-container h2 {
+  margin-top: 0;
+}
+
+.documents-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.documents-container li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
